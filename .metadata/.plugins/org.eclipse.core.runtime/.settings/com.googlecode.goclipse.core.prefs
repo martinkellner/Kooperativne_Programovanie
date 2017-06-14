@@ -1,0 +1,6 @@
+GoToolPreferences.GOFMT_Path=\:
+GoToolPreferences.GO_GURU_Path=
+GoToolPreferences.godef.Path=
+daemon_path=
+eclipse.preferences.version=1
+format_onSave=true

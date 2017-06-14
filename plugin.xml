@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+      point = "org.eclipse.ui.preferencePages">
+       <page id="ShareCode.Plugin.Preferences.page1"
+	    class="rtsharecode.common.gui.PreferencePage"
+            name="Kooperatívne programovanie">
+       </page>
+   </extension>
+   
+   <extension
+   	    point="org.eclipse.ui.popupMenus">
+        <objectContribution
+            adaptable="true"
+            id="ShareCode.Plugin.contribution0"
+            objectClass="org.eclipse.core.resources.IProject">
+            <menu
+               id="ShareCode.Plugin.menu1"
+               label="Kooperatívne programovanie"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+	        </menu>
+    	    <action
+        	    class="rtsharecode.common.gui.ReceiveProjectAction"
+            	enablesFor="1"
+              	id="ShareCode.Plugin.ReceiveProject.action0"
+            	label="Zdieľať projekt"
+               	menubarPath="ShareCode.Plugin.menu1/group1">
+         	</action>
+      	</objectContribution>
+	</extension>
+	
+	<extension 
+		point="org.eclipse.ui.views">
+		<view
+			id="ShareCode.Plugin.View"
+			name="Kooperatívne programovanie"
+			class="rtsharecode.common.gui.view.CustomView"
+		/>
+	</extension>		
+</plugin>
